@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GetFavImagesConsole.cs
 {
-    class Variables
+    public class Variables
     {
         // Insert your API key values here.
         static readonly string consumerKey = "";
