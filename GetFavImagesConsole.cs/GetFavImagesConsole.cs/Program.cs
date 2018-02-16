@@ -21,14 +21,21 @@ namespace GetFavImagesConsole.cs
 
             if (args[0] == "get" && args[1] == "all")
             {
-                Console.WriteLine("start Downloading");
-                downloadMedias();
+                try
+                {
+                    Console.WriteLine("start Downloading");
+                    downloadMedias();
+                }
+                catch(System.Net.WebException)
+                {
+                    Console.WriteLine("Error!!たぶんTwitter認証が出来てません（多分）");
+                }
             }
 
             if (args.Length > 0) { SystemSetting.setting(args); }
 
 
-            Console.Write("oh euro!!");
+            Console.WriteLine("oh euro!!");
             Console.ReadKey();
         }
 
